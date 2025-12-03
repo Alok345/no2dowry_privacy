@@ -1,135 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No2Dowry - Privacy Policy</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fafafa;
-            color: #222;
-            line-height: 1.6;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
             padding: 20px;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: #ffdd40;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            background-color: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .privacy-policy {
+            background-color: white;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
         }
-        h1, h2 {
-            color: #333;
+        
+        .intro {
+            font-size: 1.1rem;
+            padding: 20px;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2575fc;
         }
-        a {
-            color: #0066cc;
+        
+        .policy-section {
+            margin-bottom: 40px;
+        }
+        
+        .policy-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .policy-section h2 i {
+            color: #6a11cb;
+        }
+        
+        .policy-section h3 {
+            color: #34495e;
+            margin: 20px 0 10px 0;
+        }
+        
+        .policy-section p {
+            margin-bottom: 15px;
+        }
+        
+        .policy-section ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .policy-section li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 5px;
+        }
+        
+        .policy-section li:before {
+            content: "•";
+            color: #6a11cb;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .highlight-box {
+            background-color: #f9f9ff;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #6a11cb;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #6a11cb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .email-link:hover {
+            background-color: #2575fc;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #6a11cb;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-to-top:hover {
+            background-color: #2575fc;
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                padding: 20px 0;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .privacy-policy {
+                padding: 20px;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
-
 <body>
-<div class="container">
-    <h1>Privacy Policy for No2Dowry</h1>
-    <p><strong>Last updated:</strong> 1 December 2025</p>
-
-    <p>
-        No2Dowry (“we”, “our”, or “us”) operates the No2Dowry mobile application (the “App”).
-        This Privacy Policy explains how we collect, use, and protect your data.
-        By using our App, you agree to the practices described in this policy.
-    </p>
-
-    <h2>1. Information We Collect</h2>
-    <p>We collect the following types of information:</p>
-    <ul>
-        <li><strong>Email address</strong></li>
-        <li><strong>Phone number</strong></li>
-        <li><strong>Location data</strong> (approximate or precise)</li>
-        <li><strong>Photos</strong> (such as profile images)</li>
-        <li><strong>Hobbies and interests</strong></li>
-    </ul>
-
-    <h2>2. How We Use Your Information</h2>
-    <p>We use your information to:</p>
-    <ul>
-        <li>Create and manage user accounts</li>
-        <li>Enable app features and personalization</li>
-        <li>Improve user matching</li>
-        <li>Provide customer support</li>
-        <li>Ensure user safety and prevent misuse</li>
-        <li>Comply with legal obligations</li>
-    </ul>
-
-    <h2>3. Third-Party Services (Firebase)</h2>
-    <p>
-        No2Dowry uses Google Firebase services which may process data such as:
-    </p>
-    <ul>
-        <li>Firebase Authentication</li>
-        <li>Firebase Firestore / Realtime Database</li>
-        <li>Firebase Storage</li>
-        <li>Firebase Analytics</li>
-    </ul>
-    <p>
-        Firebase Privacy Policy:
-        <a href="https://policies.google.com/privacy" target="_blank">
-            https://policies.google.com/privacy
-        </a>
-    </p>
-
-    <h2>4. Data Sharing</h2>
-    <p>
-        We do not share your personal information with third parties except:
-    </p>
-    <ul>
-        <li>Firebase (to enable app functionality)</li>
-        <li>Law enforcement if legally required</li>
-        <li>Service providers that support app operations</li>
-    </ul>
-
-    <h2>5. Data Retention</h2>
-    <p>
-        We keep your data as long as your account is active. If you delete your account,
-        your data is removed within a reasonable timeframe unless required by law.
-    </p>
-
-    <h2>6. Security</h2>
-    <p>
-        We use industry-standard security practices, including encrypted data transmission,
-        secure Firebase storage, and authentication controls.  
-        However, no method is 100% secure.
-    </p>
-
-    <h2>7. Age Restrictions</h2>
-    <p>
-        No2Dowry is intended for users aged <strong>18 and above</strong>.  
-        We do not knowingly collect information from children.
-    </p>
-
-    <h2>8. Your Rights</h2>
-    <p>You may:</p>
-    <ul>
-        <li>Access your personal data</li>
-        <li>Update or correct information</li>
-        <li>Request account and data deletion</li>
-    </ul>
-
-    <h2>9. Changes to This Policy</h2>
-    <p>
-        We may update this Privacy Policy from time to time.
-        Any updates will be posted on this page.
-    </p>
-
-    <h2>10. Contact Us</h2>
-    <p>
-        If you have any questions about this Privacy Policy, contact us at:
-    </p>
-    <p>
-        📧 <strong>no2dowry.ad2click@gmail.com</strong>
-    </p>
-</div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                No2Dowry
+            </div>
+            <h1>Privacy Policy</h1>
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i> Last Updated: 1 December 2025
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="privacy-policy">
+            <div class="intro">
+                <p><strong>Your privacy matters to us.</strong> This Privacy Policy explains what information we collect, how we use it, and the choices available to you. By creating an account or using the No2Dowry mobile application ("App"), you agree to this policy.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-info-circle"></i> 1. Information We Collect</h2>
+                <p>We collect information to provide a safe, reliable, and personalized matchmaking experience.</p>
+                
+                <h3>A. Information You Provide</h3>
+                <p>This includes information you choose to give while creating or using your account:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Gender</li>
+                    <li>Date of birth (18+ only)</li>
+                    <li>Email address</li>
+                    <li>Phone number</li>
+                    <li>City or location</li>
+                    <li>Photos you upload (profile or gallery)</li>
+                    <li>Hobbies, interests, preferences</li>
+                    <li>Marital status and basic lifestyle details</li>
+                    <li>Communication shared voluntarily with our support team</li>
+                    <li>Information submitted while participating in contests, surveys, or promotions</li>
+                </ul>
+                <p>If you choose to use paid features in the future, you may be asked to provide payment details through a secure payment provider. We do not store full payment information ourselves.</p>
+                
+                <h3>B. Information We Collect Automatically</h3>
+                <p>When you use the App, we may automatically collect:</p>
+                
+                <div class="highlight-box">
+                    <h4>Device Information</h4>
+                    <ul>
+                        <li>Device model, OS version, app version</li>
+                        <li>IP address</li>
+                        <li>Device identifiers</li>
+                        <li>Crash logs and app performance data</li>
+                    </ul>
+                    
+                    <h4>Usage Information</h4>
+                    <ul>
+                        <li>Date/time of login</li>
+                        <li>Features you use</li>
+                        <li>Profiles you view</li>
+                        <li>Interaction activity (likes, matches, messages)</li>
+                        <li>Basic analytics data (via Firebase)</li>
+                    </ul>
+                </div>
+                <p>This helps us improve app features, keep your account secure, and detect misuse.</p>
+                
+                <h3>C. Information We Receive From Others</h3>
+                <p>If you choose to sign in through a third-party login (e.g., Google or Apple), we may receive basic profile information such as your name or email address.</p>
+                <p>We do not access your social media activity or contacts.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-cogs"></i> 2. How We Use Your Information</h2>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Create and manage your account</li>
+                    <li>Show relevant matches</li>
+                    <li>Personalize your experience</li>
+                    <li>Improve app performance and features</li>
+                    <li>Provide customer support</li>
+                    <li>Maintain safety and prevent misuse</li>
+                    <li>Detect fraud, impersonation, and suspicious activity</li>
+                    <li>Comply with applicable platform or legal requirements</li>
+                </ul>
+                <p>We do not use your data for purposes not mentioned here.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-eye"></i> 3. Profile Visibility</h2>
+                <p>To provide the matchmaking service, certain information you choose to share—such as your name, age, gender, location, photos, and interests—may be visible to other users on the platform.</p>
+                <p>You control what you share through your profile settings.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-handshake"></i> 4. Third-Party Services</h2>
+                <p>No2Dowry uses trusted partners to operate securely and efficiently, including:</p>
+                <p><strong>Google Firebase</strong> (Authentication, Database, Storage, Analytics)<br>
+                Firebase Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+                <p>We may use additional service providers for hosting, analytics, moderation, or communication. These partners follow strict confidentiality and data protection requirements.</p>
+                <p>We do not sell or rent your personal information.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-share-alt"></i> 5. Data Sharing</h2>
+                <p>We may share information in these limited situations:</p>
+                <ul>
+                    <li>With service providers who support our App operations</li>
+                    <li>With law enforcement when required by applicable law</li>
+                    <li>To prevent harm, fraud, or violations of safety policies</li>
+                    <li>With users as part of the matchmaking functionality (e.g., your public profile)</li>
+                </ul>
+                <p>We do not share your data with advertisers or unrelated third parties.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-database"></i> 6. Data Retention</h2>
+                <p>We keep your information as long as your account is active.</p>
+                <p>When you request account deletion:</p>
+                <ul>
+                    <li>Most personal data is removed within a reasonable time</li>
+                    <li>Limited records may be retained only where legally required (fraud prevention, dispute resolution, security logs)</li>
+                </ul>
+                <p>We do not retain unnecessary personal information after account deletion.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-shield-alt"></i> 7. Security</h2>
+                <p>We use industry-standard security measures, including:</p>
+                <ul>
+                    <li>Encrypted data transmission</li>
+                    <li>Secure Firebase storage</li>
+                    <li>Access controls</li>
+                    <li>Regular internal reviews</li>
+                </ul>
+                <p>While we take strong precautions, no system is completely immune from risks.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-user-plus"></i> 8. Age Restrictions</h2>
+                <p>No2Dowry is strictly for individuals 18 years and above.</p>
+                <p>We do not knowingly collect or store data of minors.</p>
+                <p>Accounts suspected to belong to minors may be restricted or removed for safety.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-user-check"></i> 9. Your Rights & Choices</h2>
+                <p>Depending on your region, you may:</p>
+                <ul>
+                    <li>Access your personal data</li>
+                    <li>Update or edit your information</li>
+                    <li>Delete your account</li>
+                    <li>Manage permissions (camera, location, notifications)</li>
+                    <li>Contact us for any privacy-related requests</li>
+                </ul>
+                <p>You can make most changes directly through the App.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-globe"></i> 10. International Data Processing</h2>
+                <p>Your information may be stored or processed in countries where our service providers operate (such as India or the United States).</p>
+                <p>We ensure that appropriate protection measures are applied to your data.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-cookie-bite"></i> 11. Cookies & Tracking Technologies</h2>
+                <p>The App may use:</p>
+                <ul>
+                    <li>Mobile identifiers</li>
+                    <li>Firebase analytics signals</li>
+                    <li>Device-level behavioural analytics</li>
+                </ul>
+                <p>These tools help improve security, performance, and user experience.</p>
+                <p>You can control certain permissions (like location or notifications) through your device settings.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2><i class="fas fa-sync-alt"></i> 12. Changes to This Privacy Policy</h2>
+                <p>We may update this policy periodically.</p>
+                <p>The latest version will always be available within the App and on our website.</p>
+                <p>Continued use of the App means you accept the updated policy.</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3><i class="fas fa-envelope"></i> 13. Contact Us</h3>
+                <p>If you have questions or concerns about this Privacy Policy or your data:</p>
+                <a href="mailto:no2dowry.ad2click@gmail.com" class="email-link">
+                    <i class="fas fa-paper-plane"></i> no2dowry.ad2click@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 No2Dowry. All rights reserved.</p>
+            <p>This privacy policy is effective as of 1 December 2025.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
